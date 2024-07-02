@@ -3,15 +3,15 @@ def display_board(board):
     # and prints it out to the console.
     print("+-------+-------+-------+")
     print("|       |       |       |")
-    print("|   1   |   2   |   3   |")
+    print(f"|   {board[0][0]}   |   {board[0][1]}   |   {board[0][2]}   |")
     print("|       |       |       |")
     print("+-------+-------+-------+")
     print("|       |       |       |")
-    print("|   4   |   X   |   6   |")
+    print(f"|   {board[1][0]}   |   {board[1][1]}   |   {board[1][2]}   |")
     print("|       |       |       |")
     print("+-------+-------+-------+")
     print("|       |       |       |")
-    print("|   7   |   8   |   9   |")
+    print(f"|   {board[2][0]}   |   {board[2][1]}   |   {board[2][2]}   |")
     print("|       |       |       |")
     print("+-------+-------+-------+")
 
