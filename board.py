@@ -2,10 +2,7 @@ def display_board(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
     for row in board:
-        print("+-------+-------+-------+")
-        print("|       |       |       |")
-        print(f"|   {row[0]}   |   {row[1]}   |   {row[2]}   |")
-        print("|       |       |       |")
+        print(f"+-------+-------+-------+\n|       |       |       |\n|   {row[0]}   |   {row[1]}   |   {row[2]}   |\n|       |       |       |")
     print("+-------+-------+-------+")
 
 
