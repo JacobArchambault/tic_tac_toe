@@ -6,9 +6,10 @@ def display_board(board):
     print("+-------+-------+-------+")
 
 
-# def enter_move(board):
-#     # The function accepts the board's current status, asks the user about their move, 
-#     # checks the input, and updates the board according to the user's decision.
+def enter_move(board):
+    # The function accepts the board's current status, asks the user about their move, 
+    # checks the input, and updates the board according to the user's decision.
+    move = input("Enter your move: ")
 
 
 # def make_list_of_free_fields(board):

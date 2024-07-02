@@ -1,6 +1,7 @@
-import board
+from board import display_board, enter_move
 
-foo = [[1,2,3],
+game_board = [[1,2,3],
     [4,"X",6],
     [7,8,9]]
-board.display_board(foo)
+display_board(game_board)
+enter_move(game_board)
