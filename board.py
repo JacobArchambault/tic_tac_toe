@@ -23,8 +23,11 @@ def enter_move(board):
         try:
             move = int(input("Enter your move: "))
             index = board_dict[move]
-            board[index[0]][index[1]] = "O"
-            return
+            if board[index[0]][index[1]] not in ("O", "X"):
+                board[index[0]][index[1]] = "O"
+                return
+            else:
+                print("That space is already occupied")
         except (ValueError, KeyError):
             print("Invalid input. Please enter a number between 1 and 9")
 
@@ -33,6 +36,7 @@ def enter_move(board):
 # def make_list_of_free_fields(board):
 #     # The function browses the board and builds a list of all the free squares; 
 #     # the list consists of tuples, while each tuple is a pair of row and column numbers.
+
 
 
 # def victory_for(board, sign):
