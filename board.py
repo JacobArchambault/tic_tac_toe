@@ -19,9 +19,14 @@ board_dict = {1: (0, 0),
 def enter_move(board):
     # The function accepts the board's current status, asks the user about their move, 
     # checks the input, and updates the board according to the user's decision.
-    move = int(input("Enter your move: "))
-    index = board_dict[move]
-    board[index[0]][index[1]] = "O"
+    while True:
+        try:
+            move = int(input("Enter your move: "))
+            index = board_dict[move]
+            board[index[0]][index[1]] = "O"
+            return
+        except (ValueError, KeyError):
+            print("Invalid input. Please enter a number between 1 and 9")
 
 
 
