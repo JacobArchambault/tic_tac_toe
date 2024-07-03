@@ -6,10 +6,23 @@ def display_board(board):
     print("+-------+-------+-------+")
 
 
+board_dict = {1: (0, 0),
+2: (0,1), 
+3: (0,2),
+4: (1,0),
+5: (1,1),
+6: (1,2),
+7: (2,0),
+8: (2,1),
+9: (2,2)}
+
 def enter_move(board):
     # The function accepts the board's current status, asks the user about their move, 
     # checks the input, and updates the board according to the user's decision.
-    move = input("Enter your move: ")
+    move = int(input("Enter your move: "))
+    index = board_dict[move]
+    board[index[0]][index[1]] = "O"
+
 
 
 # def make_list_of_free_fields(board):

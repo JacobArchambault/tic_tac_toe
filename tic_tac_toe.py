@@ -5,3 +5,4 @@ game_board = [[1,2,3],
     [7,8,9]]
 display_board(game_board)
 enter_move(game_board)
+display_board(game_board)
