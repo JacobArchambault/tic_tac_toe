@@ -10,7 +10,7 @@ board_dict = {1: (0, 0),
 2: (0,1), 
 3: (0,2),
 4: (1,0),
-5: (1,1),
+5: "X",
 6: (1,2),
 7: (2,0),
 8: (2,1),
@@ -25,6 +25,7 @@ def enter_move(board):
             index = board_dict[move]
             if board[index[0]][index[1]] not in ("O", "X"):
                 board[index[0]][index[1]] = "O"
+                board_dict[move] = "O"
                 return
             else:
                 print("That space is already occupied")
@@ -33,10 +34,10 @@ def enter_move(board):
 
 
 
-# def make_list_of_free_fields(board):
-#     # The function browses the board and builds a list of all the free squares; 
-#     # the list consists of tuples, while each tuple is a pair of row and column numbers.
-
+def make_list_of_free_fields(board):
+    # The function browses the board and builds a list of all the free squares; 
+    # the list consists of tuples, while each tuple is a pair of row and column numbers.
+    free = [x for x in board_dict.values() if x not in ("O", "X")]
 
 
 # def victory_for(board, sign):
