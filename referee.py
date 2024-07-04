@@ -19,7 +19,7 @@ def victory_for(index, sign, board):
     # The function analyzes the board's status in order to check if 
     # the player using 'O's or 'X's has won the game
     for pair in winning_moves_dictionary[index]:
-        if board[pair[0]] == board[pair[1]] == sign: 
+        if sign == board[pair[0]] == board[pair[1]]: 
             console_board.display(board)
             print(f"{sign} wins!")
             exit()
