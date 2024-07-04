@@ -1,5 +1,7 @@
 winning_moves_dictionary = {
-    # pairs each index with the tuples required to complete a row with it 
+    # pairs each index i for our list of spots on the board 
+    # with tuples (j, k) representing each other pair of indices 
+    # sufficient to win a game on a turn where the element at index i is selected
     0: ((1, 2), (3, 6), (4, 8)),
     1: ((0, 2), (4, 7)),
     2: ((0, 1), (5, 8), (4, 6)),
