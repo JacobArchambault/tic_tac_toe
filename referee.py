@@ -23,4 +23,3 @@ def victory_for(index, sign, board):
             console_board.display(board)
             print(f"{sign} wins!")
             exit()
-    return False, sign
