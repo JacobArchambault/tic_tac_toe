@@ -1,3 +1,5 @@
+import console_board
+
 winning_moves_dictionary = {
     # pairs each index i for our list of spots on the board 
     # with tuples (j, k) representing each other pair of indices 
@@ -18,5 +20,7 @@ def victory_for(index, sign, board):
     # the player using 'O's or 'X's has won the game
     for pair in winning_moves_dictionary[index]:
         if board[pair[0]] == board[pair[1]] == sign: 
-            return True, sign
+            console_board.display(board)
+            print(f"{sign} wins!")
+            exit()
     return False, sign
