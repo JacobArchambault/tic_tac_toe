@@ -6,10 +6,11 @@ import referee
 game_board = [1,2,3,
     4,"X",6,
     7,8,9]
-while True:
+turn = 1
+while turn <= 8:
     console_board.display(game_board)
-    index, sign = console_player.enter_move(game_board)
+    index, sign = console_player.enter_move(game_board) if turn % 2 else computer_player.draw_move(game_board)
     referee.victory_for(index, sign, game_board)
-    console_board.display(game_board)
-    index, sign = computer_player.draw_move(game_board)
-    referee.victory_for(index, sign, game_board)
+    turn += 1
+console_board.display(game_board)
+print("It's a draw!")
