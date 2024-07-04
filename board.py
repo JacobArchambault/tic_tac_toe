@@ -1,5 +1,3 @@
-from random import choice
-
 def display(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
@@ -45,14 +43,6 @@ def enter_move(board):
         except (ValueError, IndexError):
             print("Invalid input. Please enter a number between 1 and 9")
 
-
-
-def make_list_of_free_fields(board):
-    # The function browses the board and builds a list of all the free squares; 
-    # the list consists of tuples, while each tuple is a pair of row and column numbers.
-    return [x for x in board if x not in ("O", "X")]
-
-
 def victory_for(index, sign, board):
     # The function analyzes the board's status in order to check if 
     # the player using 'O's or 'X's has won the game
@@ -63,13 +53,3 @@ def victory_for(index, sign, board):
             wins = True
             break
     return wins, sign
-
-
-def draw_move(board):
-    # The function draws the computer's move and updates the board.
-    available_fields = make_list_of_free_fields(board)
-    computer_selection = choice(available_fields)
-    index = computer_selection - 1
-    board[index] = "X"
-    return index, "X"
-
