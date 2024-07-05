@@ -1,6 +1,7 @@
 def display(board):
     # The function accepts one parameter containing the board's current status
     # and prints it out to the console.
+    print("\033[H\033[J", end="")
     print(f"""+-------+-------+-------+
 |       |       |       |
 |   {board[0]}   |   {board[1]}   |   {board[2]}   |
