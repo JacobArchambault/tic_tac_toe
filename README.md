@@ -1,3 +1,3 @@
-A one-player console-based tic-tac-toe game where you play against a computer opponent.
+A one or two-player console-based tic-tac-toe game.
 
 To run, open up a terminal and run `python tic_tac_toe.py`.
